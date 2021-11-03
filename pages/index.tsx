@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import { Tab } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Tab, Menu, Transition } from '@headlessui/react'
+import React, { Fragment, useState } from 'react'
 // import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -205,6 +205,7 @@ const Home: NextPage = () => {
       div<div> logo name  search</div> <div>      
       */}
       <Tab.Group as="div" className="mt-2">
+
         <div className="divide-y divide-black divide-opacity-25">
 
 
@@ -220,22 +221,222 @@ const Home: NextPage = () => {
               </form>
             </div>
 
+
+
             <div className="flex flex-row justify-between items-center">
               <button className="font-semibold text-sm p-2 hover:text-purple-600 pointer-events: auto; ">
                 Switch to Services
               </button>
 
-              <button className="p-2 hover:text-purple-600 ">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"></path></svg>
-              </button>
 
-              <button className="p-2 mr-7 hover:text-purple-600 ">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-              </button>
+              <Menu >
+                {({ open }) => (
+                  <>
+                    <button className="p-2 hover:text-purple-600 ">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"></path></svg>
+                    </button>
 
-              <button className="h-14 w-14 p-4 rounded-full flex items-center bg-purple-600 mr-7">
-                JD
-              </button>
+
+
+
+
+
+                    <Menu.Button className="p-2 mr-7 hover:text-purple-600 ">
+
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </Menu.Button>
+
+                    <Transition
+                      show={open}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items
+                        static
+                        className="absolute right-10 z-50 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+                      >
+                        <div className="px-4 py-3">
+                          <p className="text-sm leading-5">Signed in as</p>
+                          <p className="text-sm font-medium leading-5 text-gray-900 truncate">
+                            tom@example.com
+                          </p>
+                        </div>
+
+                        <div className="py-1">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#account-settings"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                Account settings
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#support"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                Support
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item
+                            as="span"
+                            disabled
+                            className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
+                          >
+                            New feature (soon)
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#license"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                License
+                              </a>
+                            )}
+                          </Menu.Item>
+                        </div>
+
+                        <div className="py-1">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#sign-out"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                Sign out
+                              </a>
+                            )}
+                          </Menu.Item>
+                        </div>
+                      </Menu.Items>
+                    </Transition>
+                  </>
+                )}
+
+              </Menu>
+
+
+
+              <Menu>
+                {({ open }) => (
+                  <>
+                    <Menu.Button className="h-14 w-14 p-4 rounded-full flex items-center bg-purple-600 mr-7">
+                      JD
+                    </Menu.Button>
+                    <Transition
+                      show={open}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items
+                        static
+                        className="absolute right-10 z-50 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+                      >
+                        <div className="px-4 py-3">
+                          <p className="text-sm leading-5">Signed in as</p>
+                          <p className="text-sm font-medium leading-5 text-gray-900 truncate">
+                            tom@example.com
+                          </p>
+                        </div>
+
+                        <div className="py-1">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#account-settings"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                Account settings
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#support"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                Support
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item
+                            as="span"
+                            disabled
+                            className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
+                          >
+                            New feature (soon)
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#license"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                License
+                              </a>
+                            )}
+                          </Menu.Item>
+                        </div>
+
+                        <div className="py-1">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="#sign-out"
+                                className={`${active
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700"
+                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              >
+                                Sign out
+                              </a>
+                            )}
+                          </Menu.Item>
+                        </div>
+                      </Menu.Items>
+                    </Transition>
+                  </>
+                )}
+
+              </Menu>
+
+
 
             </div>
 
@@ -266,12 +467,12 @@ const Home: NextPage = () => {
 
             <Tab.Panels as={Fragment}>
               {navigation.categories.map((category) => (
-                <Tab.Panel key={category.name} className="pt-10 pb-8 px-4 space-y-10">
+                <Tab.Panel key={category.name} className="pt-10 pb-8 px-4 space-y-10 " >
                   <div className="grid grid-cols-2 gap-x-4">
                     {category.featured.map((item) => (
-                      <div key={item.name} className="group relative text-sm">
+                      <div key={item.name} className="group relative text-sm ">
                         <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                          <img src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" />
+                          <img src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover " />
                         </div>
                         <a href={item.href} className="mt-6 block font-medium text-gray-900">
                           <span className="absolute z-10 inset-0" aria-hidden="true" />
