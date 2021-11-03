@@ -4,6 +4,10 @@ import React, { Fragment, useState } from 'react'
 // import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
+import profileImage from "../assets/images/windows.jpg"
+import Image from 'next/image'
+import Head from 'next/head'
+import Link from 'next/link'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -197,6 +201,7 @@ const Home: NextPage = () => {
   const [open, setOpen] = useState(false)
   return (
     <div className="relative m-auto h-screen">
+    
 
       {/* nav Bar */}
 
@@ -442,7 +447,7 @@ const Home: NextPage = () => {
 
 
           </div>
-          <div className="">
+          <div className="shadow-sm">
             <Tab.List className="-mb-px flex px-4 space-x-8">
               {navigation.categories.map((category) => (
                 <Tab
@@ -468,42 +473,89 @@ const Home: NextPage = () => {
             <Tab.Panels as={Fragment}>
               {navigation.categories.map((category) => (
                 <Tab.Panel key={category.name} className="pt-10 pb-8 px-4 space-y-10 " >
-                  <div className="grid grid-cols-2 gap-x-4">
-                    {category.featured.map((item) => (
-                      <div key={item.name} className="group relative text-sm ">
-                        <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                          <img src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover " />
+                  <div className="grid grid-cols-1 gap-x-4">
+                    <div className="md:grid sm:grid-cols-2 sm:gap-3 md:grid-cols-4 md:gap-3  ">
+
+                      <div className="rounded overflow-hidden shadow-lg">
+                        <Image className="w-full" src={profileImage} alt="Forest" />
+                        <div className="px-6 py-4">
+                          <div className="font-bold text-xl mb-2">Forest</div>
+                          <p className="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </p>
                         </div>
-                        <a href={item.href} className="mt-6 block font-medium text-gray-900">
-                          <span className="absolute z-10 inset-0" aria-hidden="true" />
-                          {item.name}
-                        </a>
-                        <p aria-hidden="true" className="mt-1">
-                          Shop now
-                        </p>
+                        <div className="px-6 pt-4 pb-2">
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                  {category.sections.map((section) => (
-                    <div key={section.name}>
-                      <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
-                        {section.name}
-                      </p>
-                      <ul
-                        role="list"
-                        aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
-                        className="mt-6 flex flex-col space-y-6"
-                      >
-                        {section.items.map((item) => (
-                          <li key={item.name} className="flow-root">
-                            <a href={item.href} className="-m-2 p-2 block text-gray-500">
-                              {item.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+
+                      <div className="rounded overflow-hidden shadow-lg">
+                        <Image className="w-full" src={profileImage} alt="Forest" />
+                        <div className="px-6 py-4">
+                          <div className="font-bold text-xl mb-2">Forest</div>
+                          <p className="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </p>
+                        </div>
+                        <div className="px-6 pt-4 pb-2">
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+                        </div>
+                      </div>
+
+                      <div className="rounded overflow-hidden shadow-lg">
+                        <Image className="w-full" src={profileImage} alt="Forest" />
+                        <div className="px-6 py-4">
+                          <div className="font-bold text-xl mb-2">Forest</div>
+                          <p className="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </p>
+                        </div>
+                        <div className="px-6 pt-4 pb-2">
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+                        </div>
+                      </div>
+
+                      <div className="rounded overflow-hidden shadow-lg">
+                        <Image className="w-full" src={profileImage} alt="Forest" />
+                        <div className="px-6 py-4">
+                          <div className="font-bold text-xl mb-2">Forest</div>
+                          <p className="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </p>
+                        </div>
+                        <div className="px-6 pt-4 pb-2">
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+                        </div>
+                      </div>
+
+                      <div className="rounded overflow-hidden shadow-lg">
+                        <Image className="w-full" src={profileImage} alt="Forest" />
+                        <div className="px-6 py-4">
+                          <div className="font-bold text-xl mb-2">Forest</div>
+                          <p className="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          </p>
+                        </div>
+                        <div className="px-6 pt-4 pb-2">
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+                        </div>
+                      </div>
+
+                      
+
                     </div>
-                  ))}
+                  </div>
+
                 </Tab.Panel>
               ))}
             </Tab.Panels>
