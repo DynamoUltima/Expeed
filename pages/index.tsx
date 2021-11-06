@@ -8,6 +8,12 @@ import profileImage from "../assets/images/windows.jpg"
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
+import MenuBar from '../comps/menu'
+import Search from '../comps/search'
+import Navbar from '../comps/navbar'
+import Tabbar from '../comps/tabbar'
+import Tabpanel from '../comps/tabpanel'
+import TabPanel from '../comps/tabpanel'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -201,7 +207,7 @@ const Home: NextPage = () => {
   const [open, setOpen] = useState(false)
   return (
     <div className="relative m-auto h-screen">
-    
+
 
       {/* nav Bar */}
 
@@ -214,256 +220,8 @@ const Home: NextPage = () => {
         <div className="divide-y divide-black divide-opacity-25">
 
 
-          <div className="flex flex-row justify-between p-2 items-center">
-            <div className="flex flex-row justify-between p-2 items-center" >
-              <div className="font-bold mr-7 ">Expeed</div>
-
-              <form action="" className="" >
-                <div className="flex items-center ring-2 ring-gray-400 bg-white rounded-md border-b border-gray-200 w-96 outline-none shadow-none">
-                  <label htmlFor="name" className="w-10 text-right ml-4 mr-8 text-purple-20"><svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></label>
-                  <input type="text" id="name" name="name" placeholder="search" className="flex-1 px-4 py-2 pl-0 bg-transparent placeholder-gray-300 outline-none text-gray-400"></input>
-                </div>
-              </form>
-            </div>
-
-
-
-            <div className="flex flex-row justify-between items-center">
-              <button className="font-semibold text-sm p-2 hover:text-purple-600 pointer-events: auto; ">
-                Switch to Services
-              </button>
-
-
-              <Menu >
-                {({ open }) => (
-                  <>
-                    <button className="p-2 hover:text-purple-600 ">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"></path></svg>
-                    </button>
-
-
-
-
-
-
-                    <Menu.Button className="p-2 mr-7 hover:text-purple-600 ">
-
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    </Menu.Button>
-
-                    <Transition
-                      show={open}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items
-                        static
-                        className="absolute right-10 z-50 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
-                      >
-                        <div className="px-4 py-3">
-                          <p className="text-sm leading-5">Signed in as</p>
-                          <p className="text-sm font-medium leading-5 text-gray-900 truncate">
-                            tom@example.com
-                          </p>
-                        </div>
-
-                        <div className="py-1">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#account-settings"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                Account settings
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#support"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                Support
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item
-                            as="span"
-                            disabled
-                            className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
-                          >
-                            New feature (soon)
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#license"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                License
-                              </a>
-                            )}
-                          </Menu.Item>
-                        </div>
-
-                        <div className="py-1">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#sign-out"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                Sign out
-                              </a>
-                            )}
-                          </Menu.Item>
-                        </div>
-                      </Menu.Items>
-                    </Transition>
-                  </>
-                )}
-
-              </Menu>
-
-
-
-              <Menu>
-                {({ open }) => (
-                  <>
-                    <Menu.Button className="h-14 w-14 p-4 rounded-full flex items-center bg-purple-600 mr-7">
-                      JD
-                    </Menu.Button>
-                    <Transition
-                      show={open}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items
-                        static
-                        className="absolute right-10 z-50 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
-                      >
-                        <div className="px-4 py-3">
-                          <p className="text-sm leading-5">Signed in as</p>
-                          <p className="text-sm font-medium leading-5 text-gray-900 truncate">
-                            tom@example.com
-                          </p>
-                        </div>
-
-                        <div className="py-1">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#account-settings"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                Account settings
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#support"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                Support
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item
-                            as="span"
-                            disabled
-                            className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
-                          >
-                            New feature (soon)
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#license"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                License
-                              </a>
-                            )}
-                          </Menu.Item>
-                        </div>
-
-                        <div className="py-1">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="#sign-out"
-                                className={`${active
-                                  ? "bg-gray-100 text-gray-900"
-                                  : "text-gray-700"
-                                  } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                              >
-                                Sign out
-                              </a>
-                            )}
-                          </Menu.Item>
-                        </div>
-                      </Menu.Items>
-                    </Transition>
-                  </>
-                )}
-
-              </Menu>
-
-
-
-            </div>
-
-
-          </div>
-          <div className="shadow-sm">
-            <Tab.List className="-mb-px flex px-4 space-x-8">
-              {navigation.categories.map((category) => (
-                <Tab
-                  key={category.name}
-                  className={({ selected }) =>
-                    classNames(
-                      selected ? 'text-indigo-600 border-indigo-600' : 'text-gray-900 border-transparent',
-                      'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium'
-                    )
-                  }
-                >
-                  {category.name}
-                </Tab>
-              ))}
-            </Tab.List>
-          </div>
+          <Navbar/>
+          <Tabbar/>
 
           {/* Tabs */}
           <div>
@@ -472,91 +230,7 @@ const Home: NextPage = () => {
 
             <Tab.Panels as={Fragment}>
               {navigation.categories.map((category) => (
-                <Tab.Panel key={category.name} className="pt-10 pb-8 px-4 space-y-10 " >
-                  <div className="grid grid-cols-1 gap-x-4">
-                    <div className="md:grid sm:grid-cols-2 sm:gap-3 md:grid-cols-4 md:gap-3  ">
-
-                      <div className="rounded overflow-hidden shadow-lg">
-                        <Image className="w-full" src={profileImage} alt="Forest" />
-                        <div className="px-6 py-4">
-                          <div className="font-bold text-xl mb-2">Forest</div>
-                          <p className="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </p>
-                        </div>
-                        <div className="px-6 pt-4 pb-2">
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-                        </div>
-                      </div>
-
-                      <div className="rounded overflow-hidden shadow-lg">
-                        <Image className="w-full" src={profileImage} alt="Forest" />
-                        <div className="px-6 py-4">
-                          <div className="font-bold text-xl mb-2">Forest</div>
-                          <p className="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </p>
-                        </div>
-                        <div className="px-6 pt-4 pb-2">
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-                        </div>
-                      </div>
-
-                      <div className="rounded overflow-hidden shadow-lg">
-                        <Image className="w-full" src={profileImage} alt="Forest" />
-                        <div className="px-6 py-4">
-                          <div className="font-bold text-xl mb-2">Forest</div>
-                          <p className="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </p>
-                        </div>
-                        <div className="px-6 pt-4 pb-2">
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-                        </div>
-                      </div>
-
-                      <div className="rounded overflow-hidden shadow-lg">
-                        <Image className="w-full" src={profileImage} alt="Forest" />
-                        <div className="px-6 py-4">
-                          <div className="font-bold text-xl mb-2">Forest</div>
-                          <p className="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </p>
-                        </div>
-                        <div className="px-6 pt-4 pb-2">
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-                        </div>
-                      </div>
-
-                      <div className="rounded overflow-hidden shadow-lg">
-                        <Image className="w-full" src={profileImage} alt="Forest" />
-                        <div className="px-6 py-4">
-                          <div className="font-bold text-xl mb-2">Forest</div>
-                          <p className="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </p>
-                        </div>
-                        <div className="px-6 pt-4 pb-2">
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-                        </div>
-                      </div>
-
-                      
-
-                    </div>
-                  </div>
-
-                </Tab.Panel>
+                <TabPanel key={category.name} category={category}/>
               ))}
             </Tab.Panels>
 
