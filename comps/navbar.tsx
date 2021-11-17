@@ -11,10 +11,7 @@ const Navbar = () => {
               <Search />
             </div>
 
-
-
             <MenuBar />
-
 
           </div>
     );

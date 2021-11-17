@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import { Tab, Menu, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
+
 // import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -206,7 +207,9 @@ const navigation = {
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false)
   return (
-    <div className="relative m-auto h-screen">
+    <div className="relative m-auto h-screen overflow-x-hidden">
+      
+      
 
 
       {/* nav Bar */}
