@@ -54,7 +54,7 @@ const navigation = {
 }
 
 const Home: NextPage = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
     <div className="relative m-auto h-screen overflow-x-hidden">
 
