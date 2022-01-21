@@ -11,7 +11,7 @@ interface TabPanelProps {
     
     
 }
-const TabPanel = () => {
+const PlaceOrder = () => {
 
     //TabPanel.getStaticProps=async()=>{}
     return (
@@ -33,4 +33,4 @@ const TabPanel = () => {
     );
 }
 
-export default TabPanel;
+export default PlaceOrder;

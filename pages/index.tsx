@@ -13,10 +13,9 @@ import MenuBar from '../comps/menu'
 import Search from '../comps/search'
 import Navbar from '../comps/navbar'
 import Tabbar from '../comps/tabbar'
-import Tabpanel from '../comps/tabpanel'
-import TabPanel from '../comps/tabpanel'
 import Pending from './tabPages/pending'
 import Delivered from './tabPages/delivered'
+import PlaceOrder from '../comps/placeOrder'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -27,7 +26,7 @@ const navigation = {
     {
       id: 'women',
       name: 'Place Order',
-      page: <TabPanel />
+      page: <PlaceOrder />
 
 
     },

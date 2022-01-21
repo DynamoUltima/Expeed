@@ -25,8 +25,9 @@ const SignUp = () => {
                                 className="border-b-2 border-grey-600 text-xs p-4 focus:outline-none focus:border-green-500 mb-2 bg-transparent w-full" />
                             <input type="password" placeholder="Enter password"
                                 className="w-full border-b-2 border-grey-600 text-xs p-4 focus:outline-none focus:border-green-500" />
-                         <Link href="/serviceProviders/orderPages"><button
-                                className="bg-green-500 hover:bg-green-600 text-white w-full mt-4 mb-7 font-bold focus:outline-none text-xs p-2">LOGIN</button></Link>
+                            <Link href="/serviceProviders/orderPages"><button
+                                className="bg-green-500 hover:bg-green-600 text-white w-full mt-4 mb-7 font-bold focus:outline-none text-xs p-2">LOGIN</button>
+                            </Link>
                             <a href="#" className="text-green-500 mb-5 text-xs">Forgot Password ?</a>
                         </div>
                         <div className="flex flex-row justify-between mt-12 text-xs">

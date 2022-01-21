@@ -2,9 +2,11 @@ import profileImage from "../assets/images/windows.jpg"
 import personnel from "../assets/images/personnel.png"
 import Image from 'next/image';
 import React from "react";
+import Link from "next/link";
 
 const Card = () => {
     return (
+        <Link href="/tabPages/detailPage">
         <div className="rounded overflow-hidden shadow-lg ">
             <Image className="w-full" src={profileImage} alt="Forest" />
             <div className="px-6 py-4">
@@ -37,6 +39,7 @@ const Card = () => {
             </div>
 
         </div>
+        </Link>
 
     );
 }
