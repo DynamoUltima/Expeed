@@ -3,28 +3,54 @@ import Navbar from "../../comps/navbar";
 
 const PlaceOrderDetailPage = () => {
     return (
-        <div className="divide-y divide-black divide-opacity-25 w-screen">
-
+        <div className=" w-screen  h-screen   overflow-hidden">
+            {/* divide-y divide-black divide-opacity-25 */}
             <Navbar />
-            <div className="flex flex-grow justify-between ">
+            <div className="  flex flex-row border    ">
                 {/* Project Details  */}
-                <div className="p-8  flex-col space-y-10 ">
 
-                    <div><p className="font-extrabold text-lg"> I will build a website with react and Node Js</p></div>
-
-                    <div className="w-96"><CarouselSlider /></div>
-
-                    <p className="font-extrabold text-xl text-black">About This Project</p>
+                <div className="h-screen flex-1   w-1/2 overflow-y-auto pb-20 ">
+                    <div className="p-4 flex flex-col space-y-10  justify-center items-center ">
 
 
+                        <div className="flex flex-row  justify-start w-3/4 "><p className="font-extrabold text-xl"> I will build a website with react and Node Js</p></div>
+
+                        <div className="w-3/4"><CarouselSlider /></div>
+
+                        <div className="flex flex-row  justify-start w-3/4 " >
+                            <div className="flex flex-col space-y-5">
+                                <p className="font-extrabold text-xl text-black ">About This Project</p>
+                                <p>
+                                    Websites play a significant part in a companys brand identity and require a professional touch to ensure success in achieving strategic goals.
+                                    I will be your trusted designer who also applies digital marketing and search engine optimisation best practices at the same time.
+
+                                    Ive seen too many websites launch without effective digital marketing and SEO techniques applied. They look great, but they dont perform well.
+
+                                    I am the whole package, because I have experience across the entire spectrum of online, I can design and optimise your Squarespace site for success.
+
+                                    I have eleven years of experience in digital marketing, have worked across numerous content management systems during my career and built several sites for clients.
+
+                                    I have a Bachelor of Social Science in Media Studies and a Certificate of Digital Marketing (Marketing Association).
+
+                                </p>
+
+                            </div>
 
 
+
+                        </div>
+
+
+
+
+
+
+                    </div>
                 </div>
-              
 
 
                 {/* Pricing and Contact medium */}
-                <div className=" p-8 flex flex-col space-y-10">
+                <div className=" p-8 flex flex-col space-y-10 ">
                     <p className="font-extrabold">
                         Pricing
                     </p>
@@ -42,7 +68,7 @@ const PlaceOrderDetailPage = () => {
 
                             <div className=" border border-gray-500 "></div>
 
-                            <h1 className="font-medium">WHAT&#39;S INCLUDED</h1>
+                            <h1 className="font-medium text-sm">WHAT&#39;S INCLUDED</h1>
 
                             <div className="flex flex-col space-y-5">
                                 <div className="flex flex-row space-x-3">
@@ -66,6 +92,7 @@ const PlaceOrderDetailPage = () => {
 
 
                 </div>
+
 
 
             </div>
