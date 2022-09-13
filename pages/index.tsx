@@ -5,11 +5,7 @@ import React, { Fragment, useState } from 'react'
 // import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
-import profileImage from "../assets/images/windows.jpg"
-import Image from 'next/image'
-import Head from 'next/head'
-import Link from 'next/link'
-import MenuBar from '../comps/menu'
+
 import Search from '../comps/search'
 import Navbar from '../comps/navbar'
 import Tabbar from '../comps/tabbar'

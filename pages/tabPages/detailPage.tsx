@@ -1,7 +1,10 @@
+import { NextPage } from "next";
+import Image from "next/image";
 import CarouselSlider from "../../comps/carouselSlider";
 import Navbar from "../../comps/navbar";
+import Windows from '../../assets/images/windows.jpg'
 
-const PlaceOrderDetailPage = () => {
+const PlaceOrderDetailPage: NextPage = () => {
     return (
         <div className=" w-screen  h-screen   overflow-hidden">
             {/* divide-y divide-black divide-opacity-25 */}
@@ -38,6 +41,34 @@ const PlaceOrderDetailPage = () => {
 
 
 
+                        </div>
+
+                        {/* About Seller */}
+
+                        <div className="flex flex-col  space-y-2 w-3/4">
+
+                            <div className="font-bold text-xl text-black">About Seller</div>
+                            {/* Profile Tile */}
+                            <div className="flex flex-row space-x-2">
+                                {/* Avatar */}
+                                <div className="relative w-16 h-16 bg-indigo-500 overflow-clip rounded-full ">
+                                    <Image alt="profile" layout="fill" src={Windows} />
+                                </div>
+
+                                <div className="flex flex-col space-y-2">
+                                    <div className=" flex flex-row space-x-2 ">
+                                        <div className="font-bold">UltimaJohnson</div>
+                                        <div className="  ring-1  ring-indigo-500 px-1 rounded-full text-indigo-500"> Online</div>
+
+
+                                    </div>
+                                    <div className="font-normal"> Quality is everything</div>
+                                    <button onClick={()=>console.log('contact me')} className=" ring-1 ring-indigo-500 rounded hover:bg-indigo-500">Contact me</button>
+
+                                </div>
+
+
+                            </div>
                         </div>
 
 
