@@ -1,6 +1,7 @@
 import Navbar from "../../../comps/navbar";
 import { useFormik } from 'formik';
 import * as Yup from "yup";
+import moment,{Moment} from 'moment';
 import { DatePicker, Space } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
@@ -12,6 +13,12 @@ const { RangePicker } = DatePicker;
 
 const CreateOrderPage = () => {
 
+  const dateFormat = 'DD/MM/YYYY';
+
+  const [range, setRange] = useState();
+
+  console.log(range)
+
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -21,7 +28,8 @@ const CreateOrderPage = () => {
       city: '',
       phone: '',
       expertise: '',
-      serviceType: ''
+      serviceType: '',
+      // duration: []
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -35,7 +43,8 @@ const CreateOrderPage = () => {
       phone: Yup.string(),
       campus: Yup.string(),
       expertise: Yup.string(),
-      serviceType: Yup.string()
+      serviceType: Yup.string(),
+      // duration: Yup.array()
 
     }),
     onSubmit: async (values) => {
@@ -125,7 +134,7 @@ const CreateOrderPage = () => {
 
                     <div className="col-span-6 sm:col-span-3">
                       <label htmlFor="country" className="block text-sm font-medium text-gray-700">
-                       Campus
+                        Campus
                       </label>
                       <select
 
@@ -145,12 +154,12 @@ const CreateOrderPage = () => {
 
                     <div className="col-span-6">
                       <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
-                       Description
+                        Description
                       </label>
                       <div className="mt-1 border border-gray-300 rounded-md shadow-sm  hover:border-indigo-500 p-1">
-                      <TextEditor/>
+                        <TextEditor />
                       </div>
-                      
+
                       {/* <input
                       
                         type="text"
@@ -170,7 +179,21 @@ const CreateOrderPage = () => {
                       </label>
                       <div className="mt-1 border border-gray-300 rounded-md shadow-sm  hover:border-indigo-500 ">
                         <Space direction="vertical" size={12}>
-                          <RangePicker bordered={false} />
+                          <RangePicker onChange={formik.handleChange} format={dateFormat} 
+                          
+                          defaultPickerValue={[
+                            moment('01/01/2022', dateFormat),
+                            moment('02/03/2022', dateFormat),
+                          ]}
+                           bordered={false}  
+                          // value={[
+                          //   moment('01/01/2022', dateFormat),
+                          //   moment('02/03/2022', dateFormat),
+                          // ]}
+                          
+                          />
+
+                          
                         </Space>
                       </div>
                       {/* <input

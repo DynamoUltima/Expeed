@@ -3,8 +3,8 @@ import Image from 'next/image';
 import React from "react";
 import profileImage from "../assets/images/windows.jpg"
 import personnel from "../assets/images/personnel.png"
-import Chips from "./chips";
-import Card from "./card";
+import Chips from "../../comps/chips";
+import Card from "../../comps/card";
 
 
 interface TabPanelProps {
@@ -14,6 +14,7 @@ interface TabPanelProps {
 const PlaceOrder = () => {
 
     //TabPanel.getStaticProps=async()=>{}
+    
     return (
         <Tab.Panel className="pt-10 pb-8 px-4 space-y-10 " >
             <Chips />

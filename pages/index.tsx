@@ -11,7 +11,7 @@ import Navbar from '../comps/navbar'
 import Tabbar from '../comps/tabbar'
 import Pending from './tabPages/pending'
 import Delivered from './tabPages/delivered'
-import PlaceOrder from '../comps/placeOrder'
+import PlaceOrder from './tabPages/placeOrder'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
