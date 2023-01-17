@@ -2,7 +2,7 @@ import { Tab } from "@headlessui/react";
 import Image from 'next/image';
 import personnel from "../../../../assets/images/personnel.png"
 import profileImage from "../../../../assets/images/windows.jpg"
-import OrderCards from "../../../../comps/orderComps/orderCards";
+import OrderCards from "../orderCards";
 
 
 const PendingOrder = () => {

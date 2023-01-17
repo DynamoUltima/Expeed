@@ -2,7 +2,7 @@ import { Tab } from "@headlessui/react";
 import Image from 'next/image';
 import personnel from "../../assets/images/personnel.png"
 import profileImage from "../../assets/images/windows.jpg"
-import ProgressBar from "../../comps/progressBar";
+import ProgressBar from "../progressBar";
 
 const Pending = () => {
     return (

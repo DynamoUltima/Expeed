@@ -3,11 +3,11 @@ import React, { Fragment } from "react";
 import Navbar from "../../../comps/navbar";
 import OrderTabbar from "../../../comps/orderTabbar";
 import Tabbar from "../../../comps/tabbar";
-import Delivered from "../../tabPages/delivered";
-import Pending from "../../tabPages/pending";
-import MyDeliveries from "./orderTabs/myDeliveries";
-import MyOrders from "./orderTabs/myOrders";
-import PendingOrder from "./orderTabs/pending_order";
+import Delivered from "../../../comps/tabPages/delivered";
+import Pending from "../../../comps/tabPages/pending";
+import MyDeliveries from "../../../comps/orderComps/orderTabs/myDeliveries";
+import MyOrders from "../../../comps/orderComps/orderTabs/myOrders";
+import PendingOrder from "../../../comps/orderComps/orderTabs/pending_order";
 
 const providerNavigation = {
     categories: [

@@ -9,9 +9,9 @@ import React, { Fragment, useState } from 'react'
 import Search from '../comps/search'
 import Navbar from '../comps/navbar'
 import Tabbar from '../comps/tabbar'
-import Pending from './tabPages/pending'
-import Delivered from './tabPages/delivered'
-import PlaceOrder from './tabPages/placeOrder'
+import Pending from '../comps/tabPages/pending'
+import Delivered from '../comps/tabPages/delivered'
+import PlaceOrder from '../comps/tabPages/placeOrder'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')

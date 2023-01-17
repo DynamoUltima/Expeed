@@ -3,8 +3,8 @@ import Image from 'next/image';
 import React from "react";
 import profileImage from "../assets/images/windows.jpg"
 import personnel from "../assets/images/personnel.png"
-import Chips from "../../comps/chips";
-import Card from "../../comps/card";
+import Chips from "../chips";
+import Card from "../card";
 
 
 interface TabPanelProps {

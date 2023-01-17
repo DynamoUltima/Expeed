@@ -1,7 +1,7 @@
 import { Tab } from "@headlessui/react";
-import MyDeliveries from "../pages/serviceProviders/orderPages/orderTabs/myDeliveries";
-import MyOrders from "../pages/serviceProviders/orderPages/orderTabs/myOrders";
-import PendingOrder from "../pages/serviceProviders/orderPages/orderTabs/pending_order";
+import MyDeliveries from "./orderComps/orderTabs/myDeliveries";
+import MyOrders from "./orderComps/orderTabs/myOrders";
+import PendingOrder from "./orderComps/orderTabs/pending_order";
 
 const OrderTabbar = () => {
 
