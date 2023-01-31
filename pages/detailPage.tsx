@@ -10,7 +10,7 @@ const PlaceOrderDetailPage: NextPage = () => {
         <div className=" w-screen  h-screen   overflow-hidden">
             {/* divide-y divide-black divide-opacity-25 */}
             <Navbar />
-            <div className="  flex flex-row border    ">
+            <div className="  flex flex-row border">
                 {/* Project Details  */}
 
                 <div className="h-screen flex-1   w-1/2 overflow-y-auto pb-20 ">
