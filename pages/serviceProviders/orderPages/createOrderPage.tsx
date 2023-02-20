@@ -1,15 +1,16 @@
 import Navbar from "../../../comps/navbar";
 import { useFormik } from 'formik';
-import * as Yup from "yup";
+// import * as Yup from "yup";
 import moment,{Moment} from 'moment';
-import { DatePicker, Space } from 'antd';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+// import { DatePicker, Space } from 'antd';
+// import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
-
+import * as Yup from "yup";
 import React, { useState } from 'react';
 import TextEditor from "../../../comps/orderComps/textEditor";
 
-const { RangePicker } = DatePicker;
+
+// const { RangePicker } = DatePicker;
 
 const CreateOrderPage = () => {
 
@@ -177,7 +178,7 @@ const CreateOrderPage = () => {
                       <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                         Duration
                       </label>
-                      <div className="mt-1 border border-gray-300 rounded-md shadow-sm  hover:border-indigo-500 ">
+                      {/* <div className="mt-1 border border-gray-300 rounded-md shadow-sm  hover:border-indigo-500 ">
                         <Space direction="vertical" size={12}>
                           <RangePicker onChange={formik.handleChange} format={dateFormat} 
                           
@@ -195,7 +196,7 @@ const CreateOrderPage = () => {
 
                           
                         </Space>
-                      </div>
+                      </div> */}
                       {/* <input
                         type="text"
                         name="city"
