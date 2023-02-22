@@ -1,6 +1,6 @@
 import { Tab } from "@headlessui/react";
 import React, { Fragment } from "react";
-import Navbar from "../../../comps/navbar";
+import Navbar from "../../../comps/navbar/navbar";
 import OrderTabbar from "../../../comps/orderTabbar";
 import Tabbar from "../../../comps/tabbar";
 import Delivered from "../../../comps/tabPages/delivered";

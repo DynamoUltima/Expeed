@@ -1,4 +1,4 @@
-import Navbar from "../../../comps/navbar";
+import Navbar from "../../../comps/navbar/navbar";
 import { useFormik } from 'formik';
 // import * as Yup from "yup";
 import moment,{Moment} from 'moment';

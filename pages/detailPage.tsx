@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Image from "next/image";
 // import CarouselSlider from "../../comps/carouselSlider";
-import Navbar from "../comps/navbar";
+import Navbar from "../comps/navbar/navbar";
 import CarouselSlider from "../comps/carouselSlider";
 import Windows from "../assets/images/windows.jpg"
 
