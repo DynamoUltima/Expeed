@@ -12,8 +12,8 @@ const Navigationbar = () => {
                 <div className="flex flex-col lg:flex-row justify-center  lg:justify-between items-center gap-5">
                     <p>Services</p>
                     <p>About Us</p>
-                    <p>Teacher</p>
-                    <p>Pricing</p>
+                    {/* <p>Teacher</p>
+                    <p>Pricing</p> */}
                     {/* <p>Careers</p>
                     <p>Blog</p> */}
                 </div>

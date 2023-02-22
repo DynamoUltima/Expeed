@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               </p>
               <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Get Started</button>
             </div>
-            <div className='relative  w-5/12'><Image alt="home" layout="cover" src={Windows} /></div>
+            <div className='relative  w-7/12'><Image alt="home" layout="cover" src={Windows} /></div>
           </div>
         </div>
 
