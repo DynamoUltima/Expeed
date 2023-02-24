@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gradcelaImage from "/assets/svg/gradcela logo.svg"
+import gradcelaImage from "/assets/svg/GradcelaLogo.svg"
 
 const Navigationbar = () => {
     return (
