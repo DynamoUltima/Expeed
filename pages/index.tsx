@@ -21,6 +21,11 @@ import gradcelaImage from "../assets/images/gradcela logo.png"
 import Graduation from "../assets/svg/undraw_graduation.svg"
 import Certificate from "../assets/svg/undraw_certificate.svg"
 import Education from "../assets/svg/undraw_education.svg"
+import Business from "/assets/svg/undraw_business.svg"
+import facebook from "../assets/images/facebook.png"
+import twitter from "../assets/images/twitter.png"
+import instagram from "../assets/images/instagram.png"
+import Excellence from "../assets/images/excellence-image.png"
 
 
 
@@ -74,22 +79,20 @@ const Home: NextPage = () => {
 
           <div className="flex flex-col lg:flex-row justify-center  lg:justify-between items-center gap-5">
             <div className="flex flex-col gap-5 lg:gap-10">
-              <p className=" text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-medium">
-              Do you need help with assignments, <br className="lg:flex hidden" /> term projects, final thesis, school application essays <br className="lg:flex hidden" /> job
-               cover letters, resumes, and more?
-               
+              <p className=" text-2xl sm:text-4xl md:text-5xl lg:text-5xl text-left font-medium">
+               Experienced writing helps for success in academics and beyond.
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-500">
-              That is precisely why you are here <br className="lg:flex hidden" /> Let us know what you want and our team of experts will get it done by your deadline.
+              <p className="text-sm sm:text-base lg:text-lg text-left text-gray-500">
+               Get help with assignemnts,term projects,final thesis,school application essays, job cover resumes and more.
               </p>
-              <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Get Started</button>
+              <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Coming soon</button>
             </div>
-            <div className='relative  w-7/12'><Image alt="home" layout="cover" src={Windows} /></div>
+            <div className='relative  w-11/12'><Image alt="home" layout="cover" src={Excellence} /></div>
           </div>
         </div>
 
 
-        
+
 
 
 
@@ -97,74 +100,109 @@ const Home: NextPage = () => {
 
 
       <div className="container mx-auto py-20">
-      <p className="text-base lg:text-xl font-medium text-gray-500 text-center">
-        WHY CHOOSE US
-      </p>
-      <p className=" text-3xl lg:text-5xl font-semibold text-gray-500 text-center mt-3">
-        Our Values
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-16 py-20">
-        <div className="flex flex-col gap-5 items-center">
-          {/* <img src="/assets/v1.svg" alt="v1" /> */}
-             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Graduation} /></div>
-          <p className="text-2xl font-semibold">Excellence</p>
-          <p className="text-gray-500 text-center">
-            In our school you will practice <br /> your speaking skills and just get <br /> a
-            lot of positive emotions!
-          </p>
-        </div>
-        <div className="flex flex-col gap-5 items-center">
-          {/* <img src="/assets/v2.svg" alt="v1" /> */}
-          <div className='relative w-44 h-44'><Image  layout='fill' alt="svg"  src={Certificate} /></div> 
-          <p className="text-2xl font-semibold">Quality control</p>
-          <p className="text-gray-500 text-center">
-            Our services go through <br /> several layers of assesments before <br /> it
-           is delivered to our clients
-          </p>
-        </div> <div className="flex flex-col gap-5 items-center">
-          {/* <img src="/assets/v3.svg" alt="v1" /> */}
-           <div className='relative w-44 h-44'><Image  layout='fill' alt="svg" src={Education} /></div>
-          <p className="text-2xl font-semibold">Education</p>
-          <p className="text-gray-500 text-center">
-            Gradcela <br /> makes your educational journey <br /> a
-            wonderful journey.
-          </p>
+        <p className="text-base lg:text-xl font-medium text-gray-500 text-center">
+          WHY CHOOSE US
+        </p>
+        <p className=" text-3xl lg:text-5xl font-semibold text-gray-500 text-center mt-3">
+          Our Services
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-16 py-20">
+          <div className="flex flex-col gap-5 items-center">
+            {/* <img src="/assets/v1.svg" alt="v1" /> */}
+            <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Graduation} /></div>
+            <p className="text-2xl font-semibold">Academic work</p>
+            <div className="text-gray-500 text-center">
+              <p>Assignments</p>
+              <p>Term projects</p>
+              <p>Research proposals</p>
+              <p>Final thesis</p>
+            </div>
+            {/* <p className="text-gray-500 text-center">
+              Assignments
+            </p> */}
+          </div>
+          <div className="flex flex-col gap-5 items-center">
+            {/* <img src="/assets/v2.svg" alt="v1" /> */}
+            <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Certificate} /></div>
+            <p className="text-2xl font-semibold">Applications for school</p>
+            <div className="text-gray-500 text-center">
+              <p>Common App essays</p>
+              <p>Statement of Purpose</p>
+              <p>Personal statements</p>
+              <p>Motivation letters</p>
+              <p>Sample writings</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5 items-center">
+            {/* <img src="/assets/v3.svg" alt="v1" /> */}
+            <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Education} /></div>
+            <p className="text-2xl font-semibold">Job Applications</p>
+            <div className="text-gray-500 text-center">
+              <p>Cover letters/application letters</p>
+              <p>CV</p>
+              <p>Resume</p>
+
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5 items-center">
+            {/* <img src="/assets/v3.svg" alt="v1" /> */}
+            <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Business} /></div>
+            <p className="text-2xl font-semibold">Business documents</p>
+            <div className="text-gray-500 text-center">
+              <p>Market research</p>
+              <p>Business proposals</p>
+              <p>Pitch deck</p>
+
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
 
 
       <div className="container mx-auto my-10">
-          <div className="bg-[#f8fafe] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-10 px-10 py-10 rounded-3xl items-center justify-center ">
-            <div className="flex flex-col items-center lg:items-start gap-5">
-              <div className='w-20 h-14 relative'><Image alt="logo" layout="contain" src={gradcelaImage} /></div>
-              <p className="text-center lg:text-start">0550115100</p>
-            </div>
-            <div className="flex flex-col items-center lg:items-start gap-5">
-              <p className="text-xl font-medium">Company</p>
-              {/* <p className="text-base">Careers</p>
+        <div className="bg-[#f8fafe] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-10 px-10 py-10 rounded-3xl items-center justify-center ">
+          <div className="flex flex-col items-center lg:items-start gap-5">
+            <div className='w-20 h-14 relative'><Image alt="logo" layout="contain" src={gradcelaImage} /></div>
+            <p className="text-center lg:text-start">0550115100</p>
+          </div>
+          <div className="flex flex-col items-center lg:items-start gap-5">
+            <p className="text-xl font-medium">Company</p>
+            {/* <p className="text-base">Careers</p>
               <p className="text-base">Teachers</p> */}
-              <p className="text-base">Support</p>
-              <p className="text-base">Contact</p>
+            <p className="text-base">Support</p>
+            <p className="text-base">Contact</p>
+          </div>
+          <div className="flex flex-col items-center lg:items-start gap-5">
+            <p className="text-xl font-medium">Our Services</p>
+            <p className="text-base">Academic work</p>
+            <p className="text-base">Applications for school</p>
+            <p className="text-base">Job Applications</p>
+          </div>
+          <div className="flex flex-col items-center lg:items-start gap-5">
+            <p className="text-xl font-medium">Legal</p>
+            <p className="text-base">Terms & Conditions</p>
+            <p className="text-base">Privacy policy</p>
+          </div>
+          <div className="flex flex-col items-center justify-items-start gap-5">
+            <div className=' flex items-center space-x-1'>
+              <Image className="w-[18px] h-[18px] bg-blue-700" alt="facebook-icon" width={18} height={18} src={facebook} />
+              <p>Facebook</p>
             </div>
-            <div className="flex flex-col items-center lg:items-start gap-5">
-              <p className="text-xl font-medium">Our Services</p>
-              <p className="text-base">Academic work</p>
-              <p className="text-base">Applications for school</p>
-              <p className="text-base">Job Applications</p>
+
+            <div className='flex items-center space-x-1'>
+              <Image className="w-[18px] h-[18px] bg-blue-700" alt="instagram-icon" width={18} height={18} src={instagram} />
+              <p>Instagram</p>
             </div>
-            <div className="flex flex-col items-center lg:items-start gap-5">
-              <p className="text-xl font-medium">Legal</p>
-              <p className="text-base">Terms & Conditions</p>
-              <p className="text-base">Privacy policy</p>
-            </div>
-            <div className="flex items-center gap-5">
-              {/* <BsFacebook className="text-3xl text-gray-500"/>
-                <BsTwitter className="text-3xl text-gray-500"/>
-                <BsInstagram className="text-3xl text-gray-500"/> */}
+
+            <div className='flex items-center space-x-1'><Image className="w-[18px] h-[18px] bg-blue-700" alt="facebook-icon" width={18} height={18} src={twitter} />
+              <p>Twitter</p>
             </div>
           </div>
         </div>
+      </div>
 
 
 
