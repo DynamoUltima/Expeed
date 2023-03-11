@@ -26,6 +26,7 @@ import facebook from "../assets/images/facebook.png"
 import twitter from "../assets/images/twitter.png"
 import instagram from "../assets/images/instagram.png"
 import Excellence from "../assets/images/excellence-image.png"
+import Link from 'next/link'
 
 
 
@@ -80,10 +81,10 @@ const Home: NextPage = () => {
           <div className="flex flex-col lg:flex-row justify-center  lg:justify-between items-center gap-5">
             <div className="flex flex-col gap-5 lg:gap-10">
               <p className=" text-2xl sm:text-4xl md:text-5xl lg:text-5xl text-left font-medium">
-               Experienced writing helps for success in academics and beyond.
+                Experienced writing helps for success in academics and beyond.
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-left text-gray-500">
-               Get help with assignemnts,term projects,final thesis,school application essays, job cover resumes and more.
+              <p className="text-sm sm:text-base lg:text-lg text-left text-gray-500 tracking-wider">
+                Get help with assignemnts, term projects, final thesis, school application essays, job cover resumes and more.
               </p>
               <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Coming soon</button>
             </div>
@@ -110,8 +111,8 @@ const Home: NextPage = () => {
           <div className="flex flex-col gap-5 items-center">
             {/* <img src="/assets/v1.svg" alt="v1" /> */}
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Graduation} /></div>
-            <p className="text-2xl font-semibold">Academic work</p>
-            <div className="text-gray-500 text-center">
+            <p className="text-2xl font-semibold">Academic Work</p>
+            <div className="text-gray-500 text-center tracking-wide">
               <p>Assignments</p>
               <p>Term projects</p>
               <p>Research proposals</p>
@@ -124,10 +125,10 @@ const Home: NextPage = () => {
           <div className="flex flex-col gap-5 items-center">
             {/* <img src="/assets/v2.svg" alt="v1" /> */}
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Certificate} /></div>
-            <p className="text-2xl font-semibold">Applications for school</p>
-            <div className="text-gray-500 text-center">
-              <p>Common App essays</p>
-              <p>Statement of Purpose</p>
+            <p className="text-2xl font-semibold">Applications For School</p>
+            <div className="text-gray-500 text-center tracking-wide">
+              <p>Common app essays</p>
+              <p>Statement of purpose</p>
               <p>Personal statements</p>
               <p>Motivation letters</p>
               <p>Sample writings</p>
@@ -138,8 +139,8 @@ const Home: NextPage = () => {
             {/* <img src="/assets/v3.svg" alt="v1" /> */}
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Education} /></div>
             <p className="text-2xl font-semibold">Job Applications</p>
-            <div className="text-gray-500 text-center">
-              <p>Cover letters/application letters</p>
+            <div className="text-gray-500 text-center tracking-wide">
+              <p>Cover letters / application letters</p>
               <p>CV</p>
               <p>Resume</p>
 
@@ -150,7 +151,7 @@ const Home: NextPage = () => {
             {/* <img src="/assets/v3.svg" alt="v1" /> */}
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Business} /></div>
             <p className="text-2xl font-semibold">Business documents</p>
-            <div className="text-gray-500 text-center">
+            <div className="text-gray-500 text-center tracking-wide">
               <p>Market research</p>
               <p>Business proposals</p>
               <p>Pitch deck</p>
@@ -166,7 +167,7 @@ const Home: NextPage = () => {
         <div className="bg-[#f8fafe] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-10 px-10 py-10 rounded-3xl items-center justify-center ">
           <div className="flex flex-col items-center lg:items-start gap-5">
             <div className='w-20 h-14 relative'><Image alt="logo" layout="contain" src={gradcelaImage} /></div>
-            <p className="text-center lg:text-start">0550115100</p>
+            <p className="text-center lg:text-start">+233550115100</p>
           </div>
           <div className="flex flex-col items-center lg:items-start gap-5">
             <p className="text-xl font-medium">Company</p>
@@ -177,8 +178,8 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col items-center lg:items-start gap-5">
             <p className="text-xl font-medium">Our Services</p>
-            <p className="text-base">Academic work</p>
-            <p className="text-base">Applications for school</p>
+            <p className="text-base">Academic Work</p>
+            <p className="text-base">Applications For School</p>
             <p className="text-base">Job Applications</p>
           </div>
           <div className="flex flex-col items-center lg:items-start gap-5">
@@ -187,19 +188,26 @@ const Home: NextPage = () => {
             <p className="text-base">Privacy policy</p>
           </div>
           <div className="flex flex-col items-center justify-items-start gap-5">
-            <div className=' flex items-center space-x-1'>
-              <Image className="w-[18px] h-[18px] bg-blue-700" alt="facebook-icon" width={18} height={18} src={facebook} />
-              <p>Facebook</p>
-            </div>
 
-            <div className='flex items-center space-x-1'>
-              <Image className="w-[18px] h-[18px] bg-blue-700" alt="instagram-icon" width={18} height={18} src={instagram} />
-              <p>Instagram</p>
-            </div>
+            <Link href={'https://www.facebook.com/gradcela'}>
+              <div className=' flex items-center space-x-1'>
+                <Image className="w-[18px] h-[18px] bg-blue-700" alt="facebook-icon" width={18} height={18} src={facebook} />
+                <p>Facebook</p>
+              </div>
+            </Link>
 
-            <div className='flex items-center space-x-1'><Image className="w-[18px] h-[18px] bg-blue-700" alt="facebook-icon" width={18} height={18} src={twitter} />
-              <p>Twitter</p>
-            </div>
+            <Link href={'https://www.instagram.com/gradcela/'}>
+              <div className='flex items-center space-x-1'>
+                <Image className="w-[18px] h-[18px] bg-blue-700" alt="instagram-icon" width={18} height={18} src={instagram} />
+                <p>Instagram</p>
+              </div>
+            </Link>
+
+            <Link href={'https://twitter.com/gradcela'}>
+              <div className='flex items-center space-x-1'><Image className="w-[18px] h-[18px] bg-blue-700" alt="twitter-icon" width={18} height={18} src={twitter} />
+                <p>Twitter</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

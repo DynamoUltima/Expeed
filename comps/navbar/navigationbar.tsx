@@ -10,8 +10,8 @@ const Navigationbar = () => {
 
                 <div className='w-20 h-14 relative flex items-center'><Image alt="logo" layout="contain" src={gradcelaImage} /></div>
                 <div className="md:flex hidden lg:flex-row justify-center  lg:justify-between items-center gap-5">
-                    <p>Services</p>
-                    <p>About Us</p>
+                    {/* <p>Services</p>
+                    <p>About Us</p> */}
                     {/* <p>Teacher</p>
                     <p>Pricing</p>
                     <p>Careers</p>
