@@ -81,7 +81,8 @@ const Home: NextPage = () => {
           <div className="flex flex-col lg:flex-row justify-center  lg:justify-between items-center gap-5">
             <div className="flex flex-col gap-5 lg:gap-10">
               <p className=" text-2xl sm:text-4xl md:text-5xl lg:text-5xl text-left font-medium">
-                Experienced writing helps for success in academics and beyond.
+                {/* Experienced writing helps for success in academics and beyond. */}
+                Unlock your academic and business potential with our expert services
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-left text-gray-500 tracking-wider">
                 Get help with assignemnts, term projects, final thesis, school application essays, job cover resumes and more.
