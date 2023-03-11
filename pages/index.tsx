@@ -150,7 +150,7 @@ const Home: NextPage = () => {
           <div className="flex flex-col gap-5 items-center">
             {/* <img src="/assets/v3.svg" alt="v1" /> */}
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Business} /></div>
-            <p className="text-2xl font-semibold">Business documents</p>
+            <p className="text-2xl font-semibold">Business Documents</p>
             <div className="text-gray-500 text-center tracking-wide">
               <p>Market research</p>
               <p>Business proposals</p>
