@@ -108,7 +108,7 @@ const Home: NextPage = () => {
         <p className=" text-3xl lg:text-5xl font-semibold text-gray-500 text-center mt-3">
           Our Services
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-16 py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-16 py-20">
           <div className="flex flex-col gap-5 items-center">
             {/* <img src="/assets/v1.svg" alt="v1" /> */}
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Graduation} /></div>
@@ -148,8 +148,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5 items-center">
-            {/* <img src="/assets/v3.svg" alt="v1" /> */}
+          {/* <div className="flex flex-col gap-5 items-center">
+           
             <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Business} /></div>
             <p className="text-2xl font-semibold">Business Documents</p>
             <div className="text-gray-500 text-center tracking-wide">
@@ -158,7 +158,7 @@ const Home: NextPage = () => {
               <p>Pitch deck</p>
 
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
