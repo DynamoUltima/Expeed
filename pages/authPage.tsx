@@ -24,14 +24,14 @@ const AuthPage = () => {
 
 
     // }
-    // if (session?.user.data.role.includes('client')) {
-    //     router.push('/businessPage')
-    // }
+    if (session?.user.data.role.includes('client')) {
+        router.push('/businessPage')
+    }
  
-    // if (session?.user.data.role.includes('provider')) {
-    //     console.log('true')
-    //     router.push('/serviceProviders/orderPages')
-    // }
+    if (session?.user.data.role.includes('provider')) {
+        console.log('true')
+        router.push('/serviceProviders/orderPages')
+    }
 
 
 

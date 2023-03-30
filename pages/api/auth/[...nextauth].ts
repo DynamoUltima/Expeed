@@ -50,7 +50,7 @@ export default NextAuth({
         let phone = credentials?.phone;
 
         if(!credentials?.firstName){
-          const response = await axios.post('https://expeed-admin-rjet3lspm-dynamoultima.vercel.app//api/signin', {
+          const response = await axios.post('https://expeed-admin.vercel.app/api/signin', {
 
           email, password
         })
@@ -62,7 +62,7 @@ export default NextAuth({
         // console.log('from next auth')
         // console.log(credentials) 
        if(credentials?.firstName){
-        const response = await axios.post('https://expeed-admin-rjet3lspm-dynamoultima.vercel.app/api/signup', {
+        const response = await axios.post('https://expeed-admin.vercel.app/api/signup', {
 
           email, password,firstName,lastName,phone,role:'client'
         })
@@ -70,8 +70,8 @@ export default NextAuth({
         console.log('sign up')
 
         user = response.data;
-       }
-        
+       } 
+         
 
          
 
