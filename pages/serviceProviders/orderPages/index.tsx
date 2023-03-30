@@ -47,11 +47,11 @@ export async function getServerSideProps(context: GetSessionParams | undefined) 
     const session = await getSession(context);
 
     console.log('session?.user.data.role')
-    console.log(session?.user.data.role as any);
+    // console.log(session?.user.data.role as any);
     
-    let myArray =session?.user.data.role.values ;
-    console.log('myarray')
-    console.log(myArray)
+    // let myArray =session?.user.data.role.values ;
+    // console.log('myarray')
+    // console.log(myArray)
     // console.log(myArray) 
 
   
