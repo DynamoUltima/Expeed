@@ -11,7 +11,7 @@ export interface Data {
     lastName:    string;
     email:       string;
     phone:       string;
-    role:        Role[];
+    role:        any[];
     created_on:  Date;
     updated_on:  Date;
     __v:         number;

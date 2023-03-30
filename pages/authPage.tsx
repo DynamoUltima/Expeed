@@ -17,21 +17,21 @@ const AuthPage = () => {
 
 
     const router = useRouter();
-
-    console.log(session?.user.data.role)
+    console.log('role')
+    console.log(session?.user.data.role[0])
     // if (session?.user) {
     //     router.push('/businessPage')
 
 
     // }
-    // if (session?.user.data.role.includes('client')) {
-    //     router.push('/businessPage')
-    // }
- 
-    // if (session?.user.data.role.includes('provider')) {
-    //     console.log('true')
-    //     router.push('/serviceProviders/orderPages')
-    // }
+    if (session?.user.data.role.includes('client')) {
+        router.push('/businessPage')
+    }
+
+    if (session?.user.data.role.includes('provider')) {
+        console.log('true')
+        router.push('/serviceProviders/orderPages')
+    }
 
 
 
@@ -56,7 +56,7 @@ const AuthPage = () => {
             console.log(data)
             // console.log(session)
             setEmail('');
-            setPassword('') 
+            setPassword('')
 
             console.log(session?.user.data.role)
             // if (session?.user.data.role.includes('client')) {
@@ -131,7 +131,7 @@ const AuthPage = () => {
                             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                             alt="Workflow"
                         /> */}
-                        <div className='mx-auto flex justify-center relative'><Image  alt="logo" width={150} height={100} layout="contain"  src={gradcelaImage} /></div>
+                        <div className='mx-auto flex justify-center relative'><Image alt="logo" width={150} height={100} layout="contain" src={gradcelaImage} /></div>
                         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
                         <p className="mt-2 text-center text-sm text-gray-600">
 

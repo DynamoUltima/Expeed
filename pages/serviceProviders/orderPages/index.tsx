@@ -47,7 +47,7 @@ export async function getServerSideProps(context: GetSessionParams | undefined) 
     const session = await getSession(context);
 
     console.log('session?.user.data.role')
-    // console.log(session?.user.data.role as any);
+    console.log(session?.user.data.role );
     
     // let myArray =session?.user.data.role.values ;
     // console.log('myarray')
@@ -55,7 +55,7 @@ export async function getServerSideProps(context: GetSessionParams | undefined) 
     // console.log(myArray) 
 
   
-    // if (session?.user.data.role) {
+    // if (!session?.user.data.role.includes('provider')) {
     //   return {
     //     redirect: {
     //       destination: '/businessPage',

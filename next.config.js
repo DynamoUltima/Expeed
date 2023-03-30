@@ -16,6 +16,7 @@ module.exports = {
     ]
   },
   env:{
-    NEXTAUTH_SECRET:"gradcela1126"
+    NEXTAUTH_SECRET:"gradcela1126",
+    NEXTAUTH_URL:"https://expeed-admin.vercel.app"
   }
 }

@@ -1,5 +1,5 @@
 import { Tab } from "@headlessui/react";
-import { getSession, useSession } from "next-auth/react";
+import { getSession, GetSessionParams, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import Navbar from "../comps/navbar/navbar";
@@ -16,26 +16,26 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-// export async function getServerSideProps(context) {
-//     const session = await getSession(context);
+export async function getServerSideProps(context: GetSessionParams | undefined) {
+    const session = await getSession(context);
   
-//     if (!session) {
-//       return {
-//         redirect: {
-//           destination: '/authPage',
-//           permanent: false,
-//         },
-//       };
-//     }
+    if (!session?.user) {
+      return {
+        redirect: {
+          destination: '/authPage',
+          permanent: false,
+        },
+      };
+    }
   
-//     // const user = await prisma.user.findUnique({
-//     //   where: { id: session.userId },
-//     // });
+    // const user = await prisma.user.findUnique({
+    //   where: { id: session.userId },
+    // });
   
-//     return {
-//       props: { user :''},
-//     };
-//   }
+    return {
+      props: { user :''},
+    };
+  }
 
 
 const BusinessPage = () => {
