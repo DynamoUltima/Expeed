@@ -5,30 +5,40 @@ import profileImage from "../assets/images/windows.jpg"
 import personnel from "../assets/images/personnel.png"
 import Chips from "../chips";
 import Card from "../card";
+import Link from "next/link";
 
 
 interface TabPanelProps {
-    
-    
+
+
 }
 const PlaceOrder = () => {
 
     //TabPanel.getStaticProps=async()=>{}
-    
+
     return (
-        <Tab.Panel className="pt-10 pb-8 px-4 space-y-10 " >
-            <Chips />
+        <Tab.Panel className="pt-10 pb-8 px-4 space-y-10" >
+
+            <div className="flex items-center justify-center  h-full ">
+
+                <Link href={'/serviceProviders/orderPages/createOrderPage'}>
+                    <button className="bg-indigo-600 text-white rounded-md p-2 m-2 shadow-md"> New Order</button>
+
+                </Link>
+
+            </div>
+            {/* <Chips />
             <div className="grid grid-cols-1 gap-x-4 ">
                 <div className="md:grid sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-3 xl:grid-cols-4 ">
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                  <Link href={'/detailPage'}><Card/></Link>  
+                  <Link href={'/detailPage'}><Card/></Link>
+                  <Link href={'/detailPage'}><Card/></Link>
+                  <Link href={'/detailPage'}><Card/></Link>
+                  <Link href={'/detailPage'}><Card/></Link>
+                    
                     
                 </div>
-            </div>
+            </div> */}
 
         </Tab.Panel>
     );

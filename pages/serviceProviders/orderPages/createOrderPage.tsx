@@ -1,13 +1,14 @@
 import Navbar from "../../../comps/navbar/navbar";
 import { useFormik } from 'formik';
 // import * as Yup from "yup";
-import moment,{Moment} from 'moment';
+import moment, { Moment } from 'moment';
 // import { DatePicker, Space } from 'antd';
 // import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 import * as Yup from "yup";
 import React, { useState } from 'react';
 import TextEditor from "../../../comps/orderComps/textEditor";
+import Datepicker from "react-tailwindcss-datepicker";
 
 
 // const { RangePicker } = DatePicker;
@@ -16,9 +17,14 @@ const CreateOrderPage = () => {
 
   const dateFormat = 'DD/MM/YYYY';
 
-  const [range, setRange] = useState();
 
-  console.log(range)
+  const [value, setValue] = useState({
+    startDate: new Date(),
+    endDate: new Date()
+});
+
+  
+
 
   const formik = useFormik({
     initialValues: {
@@ -30,7 +36,7 @@ const CreateOrderPage = () => {
       phone: '',
       expertise: '',
       serviceType: '',
-      // duration: []
+      duration: {startDate:new Date(),endDate:new Date()}
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -45,7 +51,7 @@ const CreateOrderPage = () => {
       campus: Yup.string(),
       expertise: Yup.string(),
       serviceType: Yup.string(),
-      // duration: Yup.array()
+      //  duration: new Yup.ObjectSchema()
 
     }),
     onSubmit: async (values) => {
@@ -65,6 +71,12 @@ const CreateOrderPage = () => {
       }
     }
   })
+
+  const handleValueChange = (newValue:any) => {
+    console.log("newValue:", newValue);
+     formik.handleChange(newValue)
+    
+}
 
   return (
     <>
@@ -178,6 +190,12 @@ const CreateOrderPage = () => {
                       <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                         Duration
                       </label>
+                      <Datepicker
+                        value={ formik.values.duration}
+                        onChange={handleValueChange}
+                        showShortcuts={true}
+                        displayFormat={"DD/MM/YYYY"}
+                      />
                       {/* <div className="mt-1 border border-gray-300 rounded-md shadow-sm  hover:border-indigo-500 ">
                         <Space direction="vertical" size={12}>
                           <RangePicker onChange={formik.handleChange} format={dateFormat} 

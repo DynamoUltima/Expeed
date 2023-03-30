@@ -27,6 +27,8 @@ import twitter from "../assets/images/twitter.png"
 import instagram from "../assets/images/instagram.png"
 import Excellence from "../assets/images/excellence-image.png"
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 
 
@@ -34,45 +36,22 @@ import Link from 'next/link'
 
 
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
-const navigation = {
-  categories: [
-    {
-      id: 'women',
-      name: 'Place Order',
-      page: <PlaceOrder />
-
-
-    },
-
-
-    {
-      id: 'men',
-      name: 'Pending Order',
-      page: <Pending />,
-
-
-    },
-
-    {
-      id: 'children',
-      name: 'Delivered',
-      page: <Delivered />,
-
-    },
-
-
-  ],
-
-}
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
+
+    const {data:session}=  useSession()
+   const router= useRouter()
+
+    // if(session?.user){
+    //   router.push('/businessPage')
+      
+    // }
+
+
   return (
-    <div className="relative m-auto h-screen overflow-x-hidden">
+    <div className="relative m-auto  h-screen overflow-x-hidden">
 
       <div className=' flex  flex-col p-4 '>
         <div className='flex flex-col bg-[#fff5f1] px-6 lg:px-16 py-10 rounded-3xl'>
@@ -87,7 +66,9 @@ const Home: NextPage = () => {
               <p className="text-sm sm:text-base lg:text-lg text-left text-gray-500 tracking-wider">
                 Get help with assignemnts, term projects, final thesis, school application essays, job cover resumes and more.
               </p>
-              <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Coming soon</button>
+              <Link href={'/businessPage'}>
+                <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Coming soon</button>
+              </Link>
             </div>
             <div className='relative  w-11/12'><Image alt="home" layout="cover" src={Excellence} /></div>
           </div>

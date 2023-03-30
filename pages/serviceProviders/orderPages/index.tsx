@@ -8,6 +8,8 @@ import Pending from "../../../comps/tabPages/pending";
 import MyDeliveries from "../../../comps/orderComps/orderTabs/myDeliveries";
 import MyOrders from "../../../comps/orderComps/orderTabs/myOrders";
 import PendingOrder from "../../../comps/orderComps/orderTabs/pending_order";
+import { getSession, GetSessionParams, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const providerNavigation = {
     categories: [
@@ -40,7 +42,49 @@ const providerNavigation = {
 
 }
 
+
+export async function getServerSideProps(context: GetSessionParams | undefined) {
+    const session = await getSession(context);
+
+    console.log('session?.user.data.role')
+    console.log(session?.user.data.role as any);
+    
+    let myArray =session?.user.data.role.values ;
+    console.log('myarray')
+    console.log(myArray)
+    // console.log(myArray) 
+
+  
+    // if (session?.user.data.role) {
+    //   return {
+    //     redirect: {
+    //       destination: '/businessPage',
+    //       permanent: false,
+    //     },
+    //   };
+    // }
+  
+    // const user = await prisma.user.findUnique({
+    //   where: { id: session.userId },
+    // });
+  
+    return {
+      props: { user :''},
+    };
+  }
+
 const OrderHome = () => {
+    const { data: session } = useSession();
+     const router=  useRouter()
+
+    // if(!session?.user.data.role.includes('provider')){
+    //  router.push('/businessPage')
+    // }
+
+
+
+
+
     return (
         <div>
             <Tab.Group as="div" className="mt-2">

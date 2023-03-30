@@ -1,15 +1,21 @@
 import { Menu, Transition } from "@headlessui/react";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
 
 const MenuBar = () => {
+  const {data :session} = useSession();
+
+
+
     return (
         <div className="flex flex-row justify-between items-center">
             <Link href="/serviceProviders/authPages/signup">
-            <button className="font-semibold text-sm p-2 hover:text-purple-600 pointer-events: auto; ">
+            
+            { session?.user.data.role.includes('provider')  ?<button className="font-semibold text-sm p-2 hover:text-purple-600 pointer-events: auto; ">
                 Switch to Services
-            </button>
+            </button>:<></>}
             </Link>
 
 
