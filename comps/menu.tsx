@@ -11,7 +11,7 @@ const MenuBar = () => {
 
     return (
         <div className="flex flex-row justify-between items-center">
-            <Link href="/serviceProviders/authPages/signup">
+            <Link href="/businessPage">
             
             { session?.user.data.role.includes('provider')  ?<button className="font-semibold text-sm p-2 hover:text-purple-600 pointer-events: auto; ">
                 Switch to Services

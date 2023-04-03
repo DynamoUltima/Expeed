@@ -47,7 +47,7 @@ export async function getServerSideProps(context: GetSessionParams | undefined) 
     const session = await getSession(context);
 
     console.log('session?.user.data.role')
-    console.log(session?.user.data.role );
+    console.log(session?.user.data );
     
     // let myArray =session?.user.data.role.values ;
     // console.log('myarray')

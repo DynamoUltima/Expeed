@@ -69,12 +69,13 @@ const AuthPage = () => {
 
 
         } catch (error) {
+            console.log('error')
             console.log(error);
 
         }
 
 
-        console.log({ email, password })
+        // console.log({ email, password })
 
     }
 

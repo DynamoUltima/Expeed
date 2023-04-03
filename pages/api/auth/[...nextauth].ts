@@ -38,6 +38,7 @@ export default NextAuth({
         phone: { label: "phone", type: "text" },
       },
       async authorize(credentials, req) {
+        console.log({credentials,text:'from next auth'});
         // Add logic here to look up the user from the credentials supplied
 
 
@@ -56,7 +57,7 @@ export default NextAuth({
         })
         
          console.log('sign in')
-        user = response.data;
+          user = response.data;
 
         }
         // console.log('from next auth')

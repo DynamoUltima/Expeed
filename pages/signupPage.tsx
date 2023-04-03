@@ -20,6 +20,15 @@ const SignupPage = () => {
     const [lastName, setLastName] = useState('')
     const [phone, setPhone] = useState('')
 
+    if (session?.user.data.role.includes('client')) {
+        router.push('/businessPage')
+    }
+
+
+    if (session?.user.data.role.includes('provider')) {
+        router.push('/serviceProviders/orderPages')
+    }
+
     const handlesignUp = async (e: any) => {
         e.preventDefault()
 
@@ -40,14 +49,14 @@ const SignupPage = () => {
             setEmail('');
             setPassword('')
             console.log(session?.user.data.role)
-            if (session?.user.data.role.includes('client')) {
-                router.push('/businessPage')
-            }
+            // if (session?.user.data.role.includes('client')) {
+            //     router.push('/businessPage')
+            // }
 
 
-            if (session?.user.data.role.includes('provider')) {
-                router.push('/serviceProviders/orderPages')
-            }
+            // if (session?.user.data.role.includes('provider')) {
+            //     router.push('/serviceProviders/orderPages')
+            // }
 
 
         } catch (error) {
@@ -202,15 +211,17 @@ const SignupPage = () => {
                             </button>
                         </div>
 
-                        <Link href={'/authPage'}>
+                        
                             <div className="text-sm flex items-center py-4">
                                 {/* href="/dashboard"  */}
-                                <a className="font-medium text-[#2DD4BF] hover:text-[#2DD4BF]">
+                                <Link href={'/authPage'}>
+                                <p className="font-medium text-[#2DD4BF] hover:text-[#2DD4BF]">
                                     Already have an account? signin
-                                </a>
+                                </p>
+                                </Link>
                             </div>
 
-                        </Link>
+                        
 
 
                     </form>

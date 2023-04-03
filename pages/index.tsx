@@ -4,6 +4,7 @@ import React, { Fragment, useState } from 'react'
 
 
 
+
 // import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
@@ -21,11 +22,13 @@ import gradcelaImage from "../assets/images/gradcela logo.png"
 import Graduation from "../assets/svg/undraw_graduation.svg"
 import Certificate from "../assets/svg/undraw_certificate.svg"
 import Education from "../assets/svg/undraw_education.svg"
+import Certification from "../assets/svg/undraw_certification.svg"
 import Business from "/assets/svg/undraw_business.svg"
 import facebook from "../assets/images/facebook.png"
 import twitter from "../assets/images/twitter.png"
-import instagram from "../assets/images/instagram.png"
+import instagram from "../assets/images/instagram-app.png"
 import Excellence from "../assets/images/excellence-image.png"
+import Facebook from "../assets/images/facebook-app.png"
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
@@ -70,7 +73,7 @@ const Home: NextPage = () => {
                 <button className="btn btn-sm lg:btn-lg bg-[#2DD4BF] p-2 text-white rounded-full border-none w-36 lg:w-44 capitalize">Coming soon</button>
               </Link>
             </div>
-            <div className='relative  w-11/12'><Image alt="home" layout="cover" src={Excellence} /></div>
+            <div className='relative  w-12/12'><Image  alt="home" layout="cover"  src={Excellence} /></div>
           </div>
         </div>
 
@@ -82,17 +85,17 @@ const Home: NextPage = () => {
       </div>
 
 
-      <div className="container mx-auto py-20">
+      <div className="container mx-auto py-10">
         <p className="text-base lg:text-xl font-medium text-gray-500 text-center">
           WHY CHOOSE US
         </p>
         <p className=" text-3xl lg:text-5xl font-semibold text-gray-500 text-center mt-3">
           Our Services
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-16 py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-16 py-10">
           <div className="flex flex-col gap-5 items-center">
             {/* <img src="/assets/v1.svg" alt="v1" /> */}
-            <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Graduation} /></div>
+            <div className='relative w-44 h-44'><Image layout='fill' alt="svg" src={Certification} /></div>
             <p className="text-2xl font-semibold">Academic Work</p>
             <div className="text-gray-500 text-center tracking-wide">
               <p>Assignments</p>
@@ -146,47 +149,48 @@ const Home: NextPage = () => {
 
 
       <div className="container mx-auto my-10">
-        <div className="bg-[#f8fafe] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-10 px-10 py-10 rounded-3xl items-center justify-center ">
+        <div className="bg-[#f8fafe] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-10 px-10 py-10 rounded-3xl items-center justify-center ">
           <div className="flex flex-col items-center lg:items-start gap-5">
-            <div className='w-20 h-14 relative'><Image alt="logo" layout="contain" src={gradcelaImage} /></div>
+            <div className=''><Image alt="logo" width={150} height={100} layout="contain" src={gradcelaImage} /></div>
             <p className="text-center lg:text-start">+233550115100</p>
           </div>
           <div className="flex flex-col items-center lg:items-start gap-5">
-            <p className="text-xl font-medium">Company</p>
+            <p className="text-xl font-extrabold">Company</p>
             {/* <p className="text-base">Careers</p>
               <p className="text-base">Teachers</p> */}
             <p className="text-base">Support</p>
             <p className="text-base">Contact</p>
           </div>
           <div className="flex flex-col items-center lg:items-start gap-5">
-            <p className="text-xl font-medium">Our Services</p>
+            <p className="text-xl font-extrabold">Our Services</p>
             <p className="text-base">Academic Work</p>
             <p className="text-base">Applications For School</p>
             <p className="text-base">Job Applications</p>
           </div>
           <div className="flex flex-col items-center lg:items-start gap-5">
-            <p className="text-xl font-medium">Legal</p>
+            <p className="text-xl font-extrabold">Legal</p>
             <p className="text-base">Terms & Conditions</p>
             <p className="text-base">Privacy policy</p>
           </div>
           <div className="flex flex-col items-center justify-items-start gap-5">
-
+          <p className="text-xl font-extrabold">Social Media</p>
             <Link href={'https://www.facebook.com/gradcela'}>
               <div className=' flex items-center space-x-1'>
-                <Image className="w-[18px] h-[18px] bg-blue-700" alt="facebook-icon" width={18} height={18} src={facebook} />
+                <Image className="w-[18px] h-[18px]" alt="facebook-icon" width={18} height={18} src={facebook} />
+                
                 <p>Facebook</p>
               </div>
             </Link>
 
             <Link href={'https://www.instagram.com/gradcela/'}>
               <div className='flex items-center space-x-1'>
-                <Image className="w-[18px] h-[18px] bg-blue-700" alt="instagram-icon" width={18} height={18} src={instagram} />
+                <Image className="w-[18px] h-[18px]" alt="instagram-icon" width={18} height={18} src={instagram} />
                 <p>Instagram</p>
               </div>
             </Link>
 
             <Link href={'https://twitter.com/gradcela'}>
-              <div className='flex items-center space-x-1'><Image className="w-[18px] h-[18px] bg-blue-700" alt="twitter-icon" width={18} height={18} src={twitter} />
+              <div className='flex items-center space-x-1'><Image className="w-[18px] h-[18px] " alt="twitter-icon" width={18} height={18} src={twitter} />
                 <p>Twitter</p>
               </div>
             </Link>
